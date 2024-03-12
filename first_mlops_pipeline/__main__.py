@@ -10,9 +10,10 @@ if __name__ == "__main__":
     parser.add_argument('--dataset_project', type=str, default="CIFAR-10 Project", help='Project name for datasets')
     parser.add_argument('--raw_dataset_name', type=str, default="CIFAR-10 Raw", help='Name for the raw dataset')
     parser.add_argument('--processed_dataset_name', type=str, default="CIFAR-10 Preprocessed", help='Name for the processed dataset')
-    parser.add_argument('--env_path', type=str, default="/root/Repositories/First_MLOPS_Pipeline/.env", help='Path to the environment variables file')
-    parser.add_argument('--repo_url', type=str, default="git@github.com:GitarthVaishnav/Cifar10_SimpleFlaskApp.git", help='URL to the Git repository')
+    parser.add_argument('--env_path', type=str, default=".env", help='Path to the environment variables file')
+    parser.add_argument('--repo_url', type=str, default="git@github.com:Mahcineminds24/Cifar10_SimpleFlaskApp.git", help='URL to the Git repository')
     parser.add_argument('--development_branch', type=str, default="development", help='Default branch for development')
+    parser.add_argument('--queue_name', type=str, default="machineminds", help='ClearML Queue Name')
 
     # Parse the arguments
     args = parser.parse_args()

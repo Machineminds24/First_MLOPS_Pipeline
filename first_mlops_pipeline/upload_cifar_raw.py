@@ -31,7 +31,9 @@ def upload_cifar10_as_numpy(dataset_project, dataset_name):
         task_name="Dataset Upload",
         task_type=Task.TaskTypes.data_processing,
     )
-    task.execute_remotely(queue_name="queue_name", exit_process=True)
+
+    task.execute_remotely(queue_name="machineminds", exit_process=True)
+
     # Load CIFAR-10 data
     (train_images, train_labels), (test_images, test_labels) = cifar10.load_data()
     print(f"Train images shape: {train_images.shape}")

@@ -163,5 +163,6 @@ def create_cifar10_pipeline(
     )
 
     # Start the pipeline
-    pipeline.start(queue="gitarth")
+    pipeline.set_default_execution_queue("machineminds")
+    pipeline.start(queue="machineminds")
     print("CIFAR-10 pipeline initiated. Check ClearML for progress.")
